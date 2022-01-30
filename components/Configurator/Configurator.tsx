@@ -89,7 +89,6 @@ import {
                       w="50%"
                       p="8px 32px"
                       mb={5}
-                      _hover={'teal.300'}
                       color="white"
                       fontSize="xs"
                       onClick={props.onOpaque}
