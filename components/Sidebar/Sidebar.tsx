@@ -61,13 +61,13 @@ export default function Sidebar(props: SidebarProps) {
     let inactiveColor = useColorModeValue("gray.400", "gray.400");
     let sidebarActiveShadow = "0px 7px 11px rgba(0, 0, 0, 0.04)";
     // Here are all the props that may change depending on sidebar's state.(Opaque or transparent)
-    if (sidebarVariant === "opaque") {
-      activeBg = "transparent";
-      inactiveBg = useColorModeValue("gray.100", "gray.600");
-      activeColor = useColorModeValue("gray.700", "white");
-      inactiveColor = useColorModeValue("gray.400", "gray.400");
-      sidebarActiveShadow = "none";
-    }
+    // if (sidebarVariant === "opaque") {
+    //   activeBg = "transparent";
+    //   inactiveBg = useColorModeValue("gray.100", "gray.600");
+    //   activeColor = useColorModeValue("gray.700", "white");
+    //   inactiveColor = useColorModeValue("gray.400", "gray.400");
+    //   sidebarActiveShadow = "none";
+    // }
   
     return routes.map((prop, key) => {
       if (prop.redirect) {
