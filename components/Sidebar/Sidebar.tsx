@@ -49,7 +49,7 @@ const Brand = ({ logoText }: BrandProps) => {
   );
 };
 
-interface SidebarProps {
+interface SidebarProps extends React.HTMLAttributes<any> {
   sidebarVariant: string;
 }
 
@@ -293,9 +293,7 @@ export function SidebarResponsive(props) {
               }}
               py="12px"
             >
-              {document.documentElement.dir === "rtl"
-                ? prop.rtlName
-                : prop.name}
+              {prop.name}
             </Text>
             {CreateLinks(prop.views)}
           </>
@@ -347,9 +345,7 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={activeColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
-                    ? prop.rtlName
-                    : prop.name}
+                  {prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -397,9 +393,7 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={inactiveColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
-                    ? prop.rtlName
-                    : prop.name}
+                  {prop.name}
                 </Text>
               </Flex>
             </Button>
@@ -460,7 +454,7 @@ export function SidebarResponsive(props) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement={document.documentElement.dir === "rtl" ? "right" : "left"}
+        placement={"left"}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
