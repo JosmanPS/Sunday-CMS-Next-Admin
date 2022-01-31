@@ -4,7 +4,7 @@ import SidebarHelpImage from "public/assets/img/SidebarHelpImage.png";
 import IconBox from "components/Icons/IconBox";
 import React from "react";
 
-export function SidebarHelp(props) {
+export default function SidebarHelp(props) {
   // Pass the computed styles into the `__css` prop
   const { children, ...rest } = props;
   return (
